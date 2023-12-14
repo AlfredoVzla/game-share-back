@@ -1,1 +1,1 @@
-# games-share
+# game-share
