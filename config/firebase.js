@@ -18,9 +18,4 @@ const app = initializeApp(firebaseConfig);
 // Verifica si la base de datos está inicializada
 const database = getDatabase(app);
 
-// Comprueba si la conexión fue exitosa
-if (database) {
-  console.log("Conexión a la base de datos establecida correctamente.");
-} else {
-  console.error("Error al conectar a la base de datos. Verifica tu configuración.");
-}
+module.exports = database;
