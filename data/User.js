@@ -25,4 +25,4 @@ class UserDao {
     }
 }
 
-module.exports = {UserDao};
+module.exports = UserDao;
