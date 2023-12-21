@@ -4,13 +4,13 @@ const { getDatabase } = require("firebase/database");
 require('dotenv').config();
 
 const firebaseConfig = {
-  apiKey: process.env.apiKey,
-  authDomain: process.env.authDomain,
-  projectId: process.env.projectId,
-  storageBucket: process.env.storageBucket,
-  messagingSenderId: process.env.messagingSenderId,
-  appId: process.env.appId,
-  databaseURL: "https://game-share-f99fb-default-rtdb.firebaseio.com/"
+  apiKey: process.env.APIKEY,
+  authDomain: process.env.AUTHDOMAIN,
+  projectId: process.env.PROJECTID,
+  storageBucket: process.env.STORAGEBUCKET,
+  messagingSenderId: process.env.MESSAGINGSENDERID,
+  appId: process.env.APPID,
+  databaseURL: process.env.DATABASEURL
 };
 
 const app = initializeApp(firebaseConfig);
@@ -18,9 +18,4 @@ const app = initializeApp(firebaseConfig);
 // Verifica si la base de datos está inicializada
 const database = getDatabase(app);
 
-// Comprueba si la conexión fue exitosa
-if (database) {
-  console.log("Conexión a la base de datos establecida correctamente.");
-} else {
-  console.error("Error al conectar a la base de datos. Verifica tu configuración.");
-}
+module.exports = database;
